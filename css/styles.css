@@ -35,6 +35,9 @@ img {
 .section {
   padding: 94px 0;
 }
+:hover {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*-------шапка главная-------------*/
 
@@ -104,6 +107,26 @@ img {
 
   cursor: pointer;
 }
+.active-portfolio {
+  list-style: none;
+  text-decoration: none;
+  color: #2196f3;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+}
+
+.active::after {
+  content: "Студия";
+  text-decoration: underline;}
+
+  .active-portfolio::after {
+  content: "Портфолио";
+  text-decoration: underline;}
 
 .header-home-link-links:not(:last-child) {
   margin-right: 50px;
