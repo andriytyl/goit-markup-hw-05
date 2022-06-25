@@ -742,6 +742,14 @@ fill: #2196f3;
 
 .checkbox {
 }
+.checkbox:checked + .checkbox-tex::before {
+  background-color: #2196f3;
+  background-image:url(../images/gala.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+  border: none;
+}
+
 .checkbox-tex {
   font-weight: 400;
   font-size: 14px;
@@ -749,13 +757,27 @@ fill: #2196f3;
   letter-spacing: 0.03em;
   color: #757575;
 }
-.checkbox-texst {
+.checkbox-tex {
+ 
   font-weight: 400;
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.03em;
-  color: #2196f3;
-  text-decoration: underline;
+ 
+   display: flex;
+  align-items: center;
+  
+}
+.checkbox-tex a { color: #2196f3;
+
+}
+.checkbox-tex::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+border-radius: 2px ;
+margin-right: 7px;
 }
 
 
@@ -795,12 +817,16 @@ fill: #2196f3;
 .section-butn:hover {
   color: #ffffff;
   background-color: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-butn:focus {
   color: #ffffff;
   background-color: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-butn {
@@ -852,8 +878,21 @@ fill: #2196f3;
   margin: 15px;
 
  
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.section-galeri-list:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition:
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+
+
+
 .section-galeri-ul :hover .galeri-top-tex {
   transform: translateY(0);
 }
@@ -878,11 +917,7 @@ fill: #2196f3;
   transform: translateY(100%);
   transition: transform 300ms linear;
 }
-.section-galeri-list:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-     transition: 250ms ;
-}
+
 
 .galeri-wrapper {
   border: 1px solid #eeeeee;
