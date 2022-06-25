@@ -664,11 +664,12 @@ img {
   height: 40px;
   left: 576px;
   top: 314px;
-
+padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   background-color: transparent;
-  margin-bottom: 10px;
+  
+  outline: transparent;
 }
 .modal-input::placeholder {
   font-weight: 400;
@@ -678,6 +679,16 @@ img {
   letter-spacing: 0.01em;
 
   color: #757575;
+  
+}
+.input-wrap :focus {
+border-color: #2196F3;
+}
+.input-wrap :focus +.imput-svg {
+fill: #2196f3;
+}
+.modal-in {
+  margin-bottom: 10px;
 }
 
 .btm {
@@ -694,6 +705,19 @@ img {
   letter-spacing: 0.01em;
 
   color: #757575;
+}
+.input-wrap {
+ position: relative;
+}
+
+.imput-svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+   
 }
 .user-tex {
   width: 100%;
@@ -733,6 +757,18 @@ img {
   color: #2196f3;
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-------портфолио-------------*/
 
@@ -782,7 +818,8 @@ img {
   color: #212121;
   padding: 6px 22px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .active-button {
   color: #ffffff;
@@ -810,13 +847,12 @@ img {
 }
 
 .section-galeri-list {
-  margin-bottom: 50px;
+  
 
   margin: 15px;
-transition-duration: 250ms;
+
  
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 .section-galeri-ul :hover .galeri-top-tex {
   transform: translateY(0);
